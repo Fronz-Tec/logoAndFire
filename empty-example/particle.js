@@ -2,7 +2,7 @@
 // texture for the particle
 let particle_texture = null;
 
-// variable holding our particle system
+// variable holding particle system
 let ps = null;
 let img;
 let graphics;
@@ -47,7 +47,7 @@ function drawLogo(){
 let ParticleSystem = function(num, v, img_) {
 
     this.particles = [];
-    this.origin = v.copy(); // we make sure to copy the vector value in case we accidentally mutate the original by accident
+    this.origin = v.copy();
     this.img = img_
     for(let i = 0; i < num; ++i){
         this.particles.push(new Particle(this.origin, this.img));
